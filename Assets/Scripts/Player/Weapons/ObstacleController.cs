@@ -3,7 +3,7 @@ using UnityEngine;
 public class ObstacleController : MonoBehaviour
 {
 
-    private Rigidbody rb;
+        private Rigidbody rb;
     PlayerShooting playerIsShooting;
     void Start()
     {
