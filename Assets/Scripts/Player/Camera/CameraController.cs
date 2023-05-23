@@ -9,13 +9,13 @@ public class CameraController : MonoBehaviour
     public float sSpeed;
     public Vector3 dist;
     public Transform lookTarget;
-    public PlayerMovement playerspeed;
+    public PlayerTouchMovement playerspeed;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        sSpeed = playerspeed.GetComponent<PlayerMovement>().moveSpeed;
+        sSpeed = playerspeed.PlayerSpeed();
     }
 
     private void FixedUpdate()

@@ -6,8 +6,11 @@ using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 public class PlayerTouchMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 JoystickSize = new Vector2(0, 0);
-    
+    private Vector2 JoystickSize = new Vector2(300, 300);
+
+    [SerializeField]
+    private RectTransform Knob;
+
     [SerializeField]
      private MyFloatingJoystick Joystick;
 
@@ -16,6 +19,21 @@ public class PlayerTouchMovement : MonoBehaviour
 
     private Finger MovementFinger;
     private Vector2 MovementAmount;
+    
+    
+    bool IsMoving = false;
+    float MoveSpeed;
+
+    private void Start()
+    {
+        // Calculate scaling factor based on screen width
+        float screenWidth = Screen.width;
+        float scalingFactor = screenWidth / 1080f; // assuming 1080p resolution as base
+                                                   // Apply scaling factor to joystick size
+        JoystickSize *= scalingFactor;
+        Knob.localScale *= scalingFactor;
+        Knob.anchoredPosition *= scalingFactor;
+    }
 
     private void OnEnable()
     {
@@ -36,7 +54,7 @@ public class PlayerTouchMovement : MonoBehaviour
 
     private void HandleFingerDown(Finger TouchedFinger)
     {
-        if (MovementFinger == null && TouchedFinger.screenPosition.x <= Screen.width /2f)
+        if (MovementFinger == null && TouchedFinger.screenPosition.x <= Screen.width /1f)
         {
             MovementFinger = TouchedFinger;
             MovementAmount = Vector2.zero;
@@ -70,6 +88,7 @@ public class PlayerTouchMovement : MonoBehaviour
     {
         if(LostFinger == MovementFinger)
         {
+            IsMoving = false;
             MovementFinger = null;
             Joystick.Knob.anchoredPosition = Vector2.zero;
             Joystick.gameObject.SetActive(false);
@@ -81,6 +100,7 @@ public class PlayerTouchMovement : MonoBehaviour
     {
         if(MovedFinger == MovementFinger)
         {
+            IsMoving = true;
             Vector2 knobPosition;
             float maxMovement = JoystickSize.x / 2f;
             ETouch.Touch currentTouch = MovedFinger.currentTouch;
@@ -103,9 +123,16 @@ public class PlayerTouchMovement : MonoBehaviour
     private void Update()
     {
         Vector3 scaledMovement = Player.speed * Time.deltaTime * new Vector3(MovementAmount.x, 0, MovementAmount.y);
-
         Player.Move(scaledMovement);
-        
+        IsPlayerMoving();
     }
-    
+
+    public bool IsPlayerMoving()
+    {
+        return IsMoving;
+    }
+    public float PlayerSpeed()
+    {
+        return MoveSpeed = Player.speed;
+    }
 }

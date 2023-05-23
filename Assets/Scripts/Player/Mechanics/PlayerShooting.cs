@@ -8,6 +8,8 @@ public class PlayerShooting : MonoBehaviour
     public float speedThreshold = 0.1f;
     public Transform shootPoint;
     public GameObject obstaclePrefab;
+    public PlayerTouchMovement player;
+
 
     private bool isMoving;
     private float lastFireTime;
@@ -19,14 +21,7 @@ public class PlayerShooting : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (Mathf.Abs(horizontal) > speedThreshold || Mathf.Abs(vertical) > speedThreshold)
-        {
-            isMoving = true;
-        }
-        else
-        {
-            isMoving = false;
-        }
+        isMoving = player.IsPlayerMoving();
 
         if (!isMoving && Time.time > lastFireTime + fireRate)
         {
