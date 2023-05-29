@@ -9,12 +9,14 @@ public class PlayerLook : MonoBehaviour
     public float rotationSpeed = 10f;
     float speedThreshold = 0.01f;
     private Transform target;
+    
 
     void Update()
     {
         // Find the nearest game object with the enemy tag within the look radius
         Collider[] enemies = Physics.OverlapSphere(transform.position, lookRadius);
         float closestDistance = Mathf.Infinity;
+
         foreach (Collider enemy in enemies)
         {
             if (enemy.CompareTag(enemyTag))

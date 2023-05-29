@@ -55,8 +55,8 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Damage player
-            PlayerController playerController = other.GetComponent<PlayerController>();
-            playerController.TakeDamage(1);
+           /* PlayerController playerController = other.GetComponent<PlayerController>();
+            playerController.TakeDamage(1);*/
         }
     }
 }

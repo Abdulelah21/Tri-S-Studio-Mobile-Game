@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6895a95ccff80c40b821ec80317b2ec, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: 
+  Type: 0
+  Name: Bow
+  ModelPrefab: {fileID: 4306586491745145338, guid: f156eebdf9dd64f4eb814dc14b67a379,
+    type: 3}
+  SpawnPoint: {x: 0, y: 0.3, z: 0.8}
+  SpawnRotation: {x: -90, y: 0, z: 90}
+  ShootConfig: {fileID: 11400000, guid: e9928793ca06c194abbb0394eabbd642, type: 2}
+  TrailConfig: {fileID: 11400000, guid: 6c1e08e0a7431cb49b607e6e59693305, type: 2}
