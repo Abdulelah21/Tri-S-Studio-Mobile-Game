@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e39f3e9e1e942a4a9e9e311956a9307, type: 3}
+  m_Name: Default - Surface
+  m_EditorClassIdentifier: 
+  ImpactTypeEffects:
+  - ImpactType: {fileID: 11400000, guid: ba0655e03627c2648a9fe2bd45f5ede6, type: 2}
+    SurfaceEffect: {fileID: 11400000, guid: 24c1da5185a510e4388ac81b0540e48c, type: 2}
+  - ImpactType: {fileID: 11400000, guid: 7022ab0ec349a404990fb06a20ec93d1, type: 2}
+    SurfaceEffect: {fileID: 11400000, guid: f1fe519e67cd66946ab333723286c8de, type: 2}
+  - ImpactType: {fileID: 11400000, guid: 45fa2b01e5842584a89b08e352138458, type: 2}
+    SurfaceEffect: {fileID: 11400000, guid: 3e690c3e11035a84b8b62ca83b1daff2, type: 2}

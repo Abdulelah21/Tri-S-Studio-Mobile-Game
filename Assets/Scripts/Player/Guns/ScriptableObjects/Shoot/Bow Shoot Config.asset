@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f393c3378d2d6694b9898cb52b7069cf, type: 3}
   m_Name: Bow Shoot Config
   m_EditorClassIdentifier: 
+  IsHitscan: 0
+  BulletPrefab: {fileID: 3953449714162495860, guid: 63d1bb585f6bbee4da7bbf0326cf1d3b,
+    type: 3}
+  BulletSpawnForce: 10
   HitMask:
     serializedVersion: 2
     m_Bits: 65
-  Spread: {x: 0.03, y: 0.03, z: 0.03}
-  FireRate: 0.7
+  Spread: {x: 0, y: 0, z: 0}
+  FireRate: 0.9

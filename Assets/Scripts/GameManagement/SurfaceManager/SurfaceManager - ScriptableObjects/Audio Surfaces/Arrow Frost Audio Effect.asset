@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0175d9a254a3ee349ac1b9710692181e, type: 3}
+  m_Name: Arrow Frost Audio Effect
+  m_EditorClassIdentifier: 
+  AudioSourcePrefab: {fileID: 1294047021273005807, guid: ac900c018ff157048b54dd791a9383d2,
+    type: 3}
+  AudioClips:
+  - {fileID: 8300000, guid: eed81918351f6754bb574f9de72b3f43, type: 3}
+  VolumeRange: {x: 0.5, y: 0.9}

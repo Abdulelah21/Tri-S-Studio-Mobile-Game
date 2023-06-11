@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
   - wall
+  - FxTemporaire
+  - Enemy
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Enemy
   - Spawn Area
   - Bullet
-  - 
+  - Player
   - 
   - 
   - 
