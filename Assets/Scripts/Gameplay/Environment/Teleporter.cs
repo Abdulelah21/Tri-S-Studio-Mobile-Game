@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
+    public GameObject NextLevel;
     public Transform teleportTarget; // The transform of the teleport destination
     public GameObject player; // The player object
     public RespawnEnemies spawnEnemy;
@@ -24,6 +25,9 @@ public class Teleporter : MonoBehaviour
     {
         if (other.CompareTag("Player") && noEnemies)
         {
+            NextLevel.SetActive(true);
+
+
             // Teleport the player to the teleport target
             player.transform.position = teleportTarget.position;
             player.transform.rotation = teleportTarget.rotation;
